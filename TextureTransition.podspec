@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TextureTransition'
-  s.version          = '1.1.1'
+  s.version          = '1.1.4'
   s.summary          = 'A short description of TextureTransition.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.

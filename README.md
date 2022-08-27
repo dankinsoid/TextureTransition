@@ -27,7 +27,7 @@ override func animateLayoutTransition(_ context: ASContextTransitioning) {
 ```swift 
 node1.set(hidden: true, transition: .opacity)
 node2.set(hidden: true, transition: .move(edge: .trailing))
-node3.removeFromSuperview(transition: [.move(edge: .trailing), .opacity])
+node3.removeFromSupernode(transition: [.move(edge: .trailing), .opacity])
 ```
 
 ## Installation
@@ -49,7 +49,7 @@ import PackageDescription
 let package = Package(
   name: "SomeProject",
   dependencies: [
-    .package(url: "https://github.com/dankinsoid/TextureTransition.git", from: "1.1.1")
+    .package(url: "https://github.com/dankinsoid/TextureTransition.git", from: "1.1.4")
   ],
   targets: [
     .target(name: "SomeProject", dependencies: ["TextureTransition"])

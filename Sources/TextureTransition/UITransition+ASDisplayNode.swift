@@ -57,7 +57,7 @@ extension ASDisplayNode {
     ///   - transition: Transition.
     ///   - animation: Animation parameters.
     ///   - completion: Block to be executed when transition finishes.
-    public func removeFromSuperview(transition: NodeTransition, animation: UIKitAnimation = .default, completion: (() -> Void)? = nil) {
+    public func removeFromSupernode(transition: NodeTransition, animation: UIKitAnimation = .default, completion: (() -> Void)? = nil) {
         addOrRemove(to: supernode, add: false, transition: transition, animation: animation, completion: completion)
     }
 
@@ -68,8 +68,8 @@ extension ASDisplayNode {
     ///   - transition: Transition.
     ///   - animation: Animation parameters.
     ///   - completion: Block to be executed when transition finishes.
-    public func add(subview: ASDisplayNode, transition: NodeTransition, animation: UIKitAnimation = .default, completion: (() -> Void)? = nil) {
-        subview.addOrRemove(to: self, add: true, transition: transition, animation: animation, completion: completion)
+    public func add(subnode: ASDisplayNode, transition: NodeTransition, animation: UIKitAnimation = .default, completion: (() -> Void)? = nil) {
+        subnode.addOrRemove(to: self, add: true, transition: transition, animation: animation, completion: completion)
     }
 
     /// Animated add or remove a subnode with given transition.
