@@ -3,13 +3,13 @@ import AsyncDisplayKit
 
 extension ASDisplayNode {
 
-    /// Animate view with given transition.
+    /// Animate node with given transition.
     ///
     /// - Parameters:
     ///   - transition: Transition.
     ///   - direction: Transition direction.
     ///   - animation: Animation parameters.
-    ///   - restoreState: Restore view state on animation completion
+    ///   - restoreState: Restore node state on animation completion
     ///   - completion: Block to be executed when animation finishes.
     public func animate(
         transition: NodeTransition,
@@ -51,7 +51,7 @@ extension ASDisplayNode {
         )
     }
 
-    /// Animated remove from superview with given transition.
+    /// Animated remove from supernode with given transition.
     ///
     /// - Parameters:
     ///   - transition: Transition.
@@ -64,7 +64,7 @@ extension ASDisplayNode {
     /// Animated add a subview with given transition.
     ///
     /// - Parameters:
-    ///   - subview: Subview to be added.
+    ///   - subview: Subnode to be added.
     ///   - transition: Transition.
     ///   - animation: Animation parameters.
     ///   - completion: Block to be executed when transition finishes.
@@ -72,7 +72,7 @@ extension ASDisplayNode {
         subview.addOrRemove(to: self, add: true, transition: transition, animation: animation, completion: completion)
     }
 
-    /// Animated add or remove a subview with given transition.
+    /// Animated add or remove a subnode with given transition.
     public func addOrRemove(
         to supernode: ASDisplayNode?,
         add: Bool,
