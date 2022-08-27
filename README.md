@@ -8,9 +8,22 @@
 
 ## Description
 
-TextureTransition provides easy way to describe node transitions.
+TextureTransition provides easy way to describe node transitions based on [VDTransiotion](https://github.com/dankinsoid/VDTransiotion.git).
 
 ## Example
+1. `.tansition` and `defaultAnimateLayoutTransition`
+```swift
+private func configureTransitions() {
+    node1.transition = .scale(anchor: .topTrailing)
+    node2.transition = .opacity
+    node3.transition = [.move(edge: .trailing), .opacity]
+}
+
+override func animateLayoutTransition(_ context: ASContextTransitioning) {
+    defaultAnimateLayoutTransition(context, animation: .default)
+}
+```
+2. Some helpers methods
 ```swift 
 node1.set(hidden: true, transition: .opacity)
 node2.set(hidden: true, transition: .move(edge: .trailing))
